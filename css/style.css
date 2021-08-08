@@ -1,0 +1,44 @@
+body{
+    background: linear-gradient(120deg,#DDDDDD,#125D98,#3C8DAD,#F5A962);
+}
+.image-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    /* -ms-transform: rotate(20deg); */
+    transform: rotate(10deg);
+border  : 3px solid #DDDDDD
+  }
+  ul {
+    
+    column-count: 3;
+    /* flex-direction:row;
+    flex-wrap: wrap;
+    display: flex;
+    height: 25vh; */
+}
+ul li {
+    padding: 15px ;
+  }
+  #but{
+     background : radial-gradient(#125D98,#3C8DAD);
+     color : #F5A962 ;
+      padding :25px;
+      margin: 20px;
+      border : 5px solid black;
+      font-size: 20px;
+  }
+  .voting{
+      color : black ;
+      font-size: 20px;
+  }
+  .voting:hover{
+      color:#F5A962;
+background-color: #125D98;
+  }
