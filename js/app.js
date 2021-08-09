@@ -1,8 +1,5 @@
 
 
-
-
-
 'use strict';
 
 let imgArray = ['bag.jpg','banana.jpg','bathroom.jpg','boots.jpg','breakfast.jpg',
@@ -21,9 +18,10 @@ let stopevent = document.getElementById('stop')
     let first ;
     let second ;
     let third ;
-    let first_image =0
-    let second_image = 0
-    let third_image =0
+    // let first_image =0
+    // let second_image = 0
+    // let third_image =0
+let picture = []
 let all = [];
 let counter = 0;
 let numberOfRound = 25;
@@ -52,14 +50,20 @@ function Rest(  name,imageSrc ) {
       third = getRandomNumber( 0, imgArray.length - 1 )
 
     }
-    while(first == second || third == second || first == third 
-      ||first ==first_image || first == second_image || first == third_image
-      || second ==first_image || second == second_image || second == third_image
-      || third ==first_image || third == second_image || third == third_image)
+while(first == second || third == second || first == third 
+  ||picture.includes(first)||picture.includes(second)||picture.includes(third))
+//     while(first == second || third == second || first == third 
+//       ||first ==first_image || first == second_image || first == third_image
+//       || second ==first_image || second == second_image || second == third_image
+//       || third ==first_image || third == second_image || third == third_image)
 
- first_image = first
- second_image = second
- third_image = third
+picture[0]= first
+picture[1]= second
+picture[2]= third
+
+//  first_image = first
+//  second_image = second
+//  third_image = third
 
     
     counter ++
