@@ -14,6 +14,7 @@ const imageSection = document.getElementById('imageSection');
 const main = document.getElementById('imageSection');
 const ul = document.getElementById("vote");
 let button =  document.getElementById('button')
+let stopevent = document.getElementById('stop')
 
 
     let first ;
@@ -83,19 +84,21 @@ function clickHandler(e) {
 
   }
   else if (counter == 25)  {
-
-let butd = document.createElement('button');
-butd.onclick = function() {myFunction()}
-butd.type="button"
-butd.id = "but"
-butd.textContent = "result"
-button.appendChild(butd)
+    // stopevent.remove()
+// let butd = document.createElement('button');
+// butd.onclick = function() {myFunction()}
+// butd.type="button"
+// butd.id = "but"
+// butd.textContent = "result"
+// button.appendChild(butd)
+stopevent.textContent = "Show Result"
 
 imageSection.removeEventListener('click', clickHandler) 
 
 }
 }
 function myFunction(){
+  imageSection.removeEventListener('click', clickHandler) 
     for (let i = 0; i < imgArray.length; i++ ){
         let liElement = document.createElement('li');
         liElement.textContent =Rest.all[i].name + " had " +Rest.all[i].click+" vote, " +"  and was seen " + Rest.all[i].shown +"times";

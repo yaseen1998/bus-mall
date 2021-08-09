@@ -44,3 +44,13 @@ ul li {
       color:#F5A962;
 background-color: #125D98;
   }
+
+  #stop{ 
+    background : radial-gradient(#125D98,#3C8DAD);
+     color : #F5A962 ;
+      padding :25px;
+      margin: 20px;
+      border : 5px solid black;
+      font-size: 20px;
+  }
+
