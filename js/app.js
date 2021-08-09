@@ -11,9 +11,9 @@ let imgArray = ['bag.jpg','banana.jpg','bathroom.jpg','boots.jpg','breakfast.jpg
 'tauntaun.jpg','unicorn.jpg','water-can.jpg','wine-glass.jpg']
 
 const imageSection = document.getElementById('imageSection');
-const main = document.getElementById('imageSection');
+// const main = document.getElementById('imageSection');
 const ul = document.getElementById("vote");
-let button =  document.getElementById('button')
+// let button =  document.getElementById('button')
 let stopevent = document.getElementById('stop')
 
 
@@ -111,8 +111,8 @@ liElement.className = "voting"
           let li = document.createElement('li')
           li.innerHTML = '<b> number of try :'+counter +'</b>'
           ul.appendChild(li)
-          button.remove()
-
+          stopevent.remove()
+          // button.remove()
 let butdr = document.createElement('button');
 butdr.onclick = function() {location.reload()}
 butdr.type="button"
