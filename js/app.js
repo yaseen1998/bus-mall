@@ -25,6 +25,9 @@ let picture = []
 let all = [];
 let counter = 0;
 let numberOfRound = 25;
+let nameArr = [];
+  let shownArr = [];
+  let clickArr = [];
 // #############################################################################
 // #############################################################################
 function getRandomNumber( min, max ) {
@@ -60,6 +63,7 @@ while(first == second || third == second || first == third
 picture[0]= first
 picture[1]= second
 picture[2]= third
+console.log(picture)
 
 //  first_image = first
 //  second_image = second
@@ -132,9 +136,7 @@ function  myFunction() {
   butdm.textContent = "reload"
   button.appendChild(butdm)
 
-  let nameArr = [];
-  let shownArr = [];
-  let clickArr = [];
+  
 
   for(let i = 0; i < Rest.all.length; i++) {
     nameArr.push(Rest.all[i].name);
@@ -142,34 +144,7 @@ function  myFunction() {
     clickArr.push(Rest.all[i].click)
 
   }
-  // #############################################################################
-// #############################################################################
-function myFunction2(){
-  imageSection.removeEventListener('click', clickHandler) 
-    for (let i = 0; i < imgArray.length; i++ ){
-        let liElement = document.createElement('li');
-        liElement.textContent =Rest.all[i].name + " had " +Rest.all[i].click+" vote, " +"  and was seen " + Rest.all[i].shown +"times";
-        if (Rest.all[i].click != 0 ){
-liElement.className = "voting"
-        } 
-        ul.appendChild(liElement);
-
-          }
-          let li = document.createElement('li')
-          li.innerHTML = '<b> number of try :'+counter +'</b>'
-          ul.appendChild(li)
-          stopevent.remove()
-          // button.remove()
-let butdr = document.createElement('button');
-butdr.onclick = function() {location.reload()}
-butdr.type="button"
-butdr.id = "but"
-butdr.textContent = "reload"
-ul.appendChild(butdr)
-}
- // #############################################################################
-// #############################################################################
-let ctx = document.getElementById( 'myChart' ).getContext( '2d' );
+  let ctx = document.getElementById( 'myChart' ).getContext( '2d' );
 
   let myChart = new Chart( ctx, {
     type: 'bar',
@@ -228,5 +203,33 @@ let ctx = document.getElementById( 'myChart' ).getContext( '2d' );
   }
   } );
  
-}
 
+
+}
+  // #############################################################################
+// #############################################################################
+function myFunction2(){
+  imageSection.removeEventListener('click', clickHandler) 
+    for (let i = 0; i < imgArray.length; i++ ){
+        let liElement = document.createElement('li');
+        liElement.textContent =Rest.all[i].name + " had " +Rest.all[i].click+" vote, " +"  and was seen " + Rest.all[i].shown +"times";
+        if (Rest.all[i].click != 0 ){
+liElement.className = "voting"
+        } 
+        ul.appendChild(liElement);
+
+          }
+          let li = document.createElement('li')
+          li.innerHTML = '<b> number of try :'+counter +'</b>'
+          ul.appendChild(li)
+          stopevent.remove()
+          // button.remove()
+let butdr = document.createElement('button');
+butdr.onclick = function() {location.reload()}
+butdr.type="button"
+butdr.id = "but"
+butdr.textContent = "reload"
+ul.appendChild(butdr)
+}
+ // #############################################################################
+// #############################################################################
