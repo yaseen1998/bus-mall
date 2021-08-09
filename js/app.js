@@ -26,7 +26,7 @@ let stopevent = document.getElementById('stop')
     let third_image =0
 let all = [];
 let counter = 0;
-let numberOfRound = 5;
+let numberOfRound = 25;
 // #############################################################################
 // #############################################################################
 function getRandomNumber( min, max ) {
