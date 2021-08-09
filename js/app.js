@@ -20,7 +20,10 @@ let stopevent = document.getElementById('stop')
     let first ;
     let second ;
     let third ;
-
+    let first_image =0
+    let second_image = 0
+    let third_image =0
+let picture = [0,0,0]
 let all = [];
 let counter = 0;
 let numberOfRound = 25;
@@ -40,9 +43,25 @@ function Rest(  name,imageSrc ) {
 
   function render() {
     
-    first =getRandomNumber( 0, imgArray.length - 1 );
-    second=getRandomNumber( 0, imgArray.length - 1 );
-    third=getRandomNumber( 0, imgArray.length - 1 );
+    
+    // second=getRandomNumber( 0, imgArray.length - 1 );
+    // third=getRandomNumber( 0, imgArray.length - 1 );
+    do{
+      first =getRandomNumber( 0, imgArray.length - 1 );
+      second =getRandomNumber( 0, imgArray.length - 1 )
+      third = getRandomNumber( 0, imgArray.length - 1 )
+
+    }
+    while(first == second || third == second || first == third )
+//       ||first ==first_image || first == second_image || first == third_image
+//       || second ==first_image || second == second_image || second == third_image
+//       || third ==first_image || third == second_image || third == third_image)
+
+//  first_image = first
+//  second_image = second
+//  third_image = third
+
+    
     counter ++
     firstImage.src = './img/' + Rest.all[first].image;
     secondImage.src = './img/' + Rest.all[second].image;
@@ -51,7 +70,6 @@ Rest.all[first].shown++
 Rest.all[second].shown++
 Rest.all[third].shown++
 
-    console.log(Rest.all)
 
   }
   for( let i = 0; i < imgArray.length; i++ ) {
@@ -67,20 +85,20 @@ function clickHandler(e) {
   if(e.target.id === 'firstImage'   &&  counter < numberOfRound) {
     Rest.all[first].click++
     render();
-    console.log(counter)
+    // console.log(counter)
 
 
   }
   else if( e.target.id === 'secondImage' && counter < numberOfRound){
     Rest.all[second].click++
     render();
-    console.log(counter)
+    // console.log(counter)
 
   }
   else if (e.target.id === 'thirdImage' && counter < numberOfRound){
     Rest.all[third].click++
     render();
-    console.log(counter)
+    // console.log(counter)
 
   }
   else if (counter == 25)  {
