@@ -143,7 +143,7 @@ function myFunction() {
   butdm.onclick = function () { location.reload()}
   butdm.type = "button"
   butdm.id = "but"
-  butdm.textContent = "reload"
+  butdm.textContent = "reload without clear data"
   button.appendChild(butdm)
 
 
@@ -244,7 +244,7 @@ function myFunction2() {
   butdr.onclick = function () { location.reload() }
   butdr.type = "button"
   butdr.id = "but"
-  butdr.textContent = "reload"
+  butdr.textContent = "reload without clear data"
   ul.appendChild(butdr)
 }
 // #############################################################################
